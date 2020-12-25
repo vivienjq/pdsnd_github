@@ -195,7 +195,7 @@ def user_stats_birth(df):
         view_data = input('\nWould you like to view 5 rows of individual trip data? Enter yes or no\n ').lower()
         if view_data in CHOICE:
             break
-            
+
     start_loc = 0
     while (view_data != 'no'):
         print(df.iloc[start_loc:(start_loc + 5)])
@@ -215,7 +215,11 @@ def main():
         trip_duration_stats(df)
         user_stats(df)
 
+        while True:
         restart = input('\nWould you like to restart? Enter yes or no.\n').lower()
+            if restart in CHOICE:
+                break
+
         if restart.lower() != 'yes':
             break
 
