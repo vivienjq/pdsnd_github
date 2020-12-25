@@ -188,6 +188,7 @@ def user_stats_birth(df):
     most_common_year = birth_year.value_counts().idxmax()
     print("The most common birth year:", most_common_year)
 
+    # Prompt user wether to view trip data
     view_data = input('\nWould you like to view 5 rows of individual trip data? Enter yes or no\n').lower()
     start_loc = 0
     while (view_data != 'no'):
