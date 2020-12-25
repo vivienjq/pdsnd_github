@@ -2,7 +2,7 @@
 2020-12-25
 
 ### Project Title
-Replace the Project Title
+Github student project
 
 ### Description
 Describe what your project is about and what it does
