@@ -8,7 +8,7 @@ Github student project
 Describe what your project is about and what it does
 
 ### Files used
-bikeshare data files
+bikeshare data files; bikeshare.py
 
 ### Credits
 proejct reviewed by udacity
