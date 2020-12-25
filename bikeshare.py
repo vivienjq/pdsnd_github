@@ -13,6 +13,8 @@ MONTHS = ['january', 'february', 'march', 'april', 'may', 'june', 'all']
 
 DAYS = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'all']
 
+CHOICE = ['yes', 'no']
+
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -188,7 +190,12 @@ def user_stats_birth(df):
     most_common_year = birth_year.value_counts().idxmax()
     print("The most common birth year:", most_common_year)
 
-    view_data = input('\nWould you like to view 5 rows of individual trip data? Enter yes or no\n').lower()
+    # Prompt user wether to view trip data
+    while True:
+        view_data = input('\nWould you like to view 5 rows of individual trip data? Enter yes or no\n ').lower()
+        if view_data in CHOICE:
+            break
+
     start_loc = 0
     while (view_data != 'no'):
         print(df.iloc[start_loc:(start_loc + 5)])
@@ -208,7 +215,11 @@ def main():
         trip_duration_stats(df)
         user_stats(df)
 
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
+        while True:
+        restart = input('\nWould you like to restart? Enter yes or no.\n').lower()
+            if restart in CHOICE:
+                break
+
         if restart.lower() != 'yes':
             break
 
